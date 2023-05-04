@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Alice&family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Alice, Poppins;
+  box-sizing: border-box;
+}
+
+#root {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+}
+
+.App {
+  background-image: linear-gradient(
+    45deg,
+    #ff9a9e 0%,
+    #fad0c4 99%,
+    #fad0c4 100%
+  );
+  min-height: 80vh;
+  max-height: 95vh;
+  width: 30vw;
+}
+
+ion-icon {
+  font-size: 1.5rem;
+}
+
+.add {
+  animation: scaleUp 500ms ease-out forwards;
+}
+
+.deleted {
+  animation: scaleDown 300ms ease-out forwards;
+}
+
+@media (max-width: 1024px) {
+  .App {
+    width: 60vw;
+    min-height: 60vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .App {
+    width: 80vw;
+    min-height: 60vh;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes scaleDown {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 0;
+  }
+}
